@@ -301,27 +301,65 @@ h3 {
 		color: $color;
 	}
 	&__content {
+		padding-top: 116px;
 		display: flex;
 		justify-content: space-between;
+	}
+	&__item {
+		max-width: 24%;
 	}
 	&__text {
 		font-weight: 600;
 		font-size: 28px;
 		color: $accent;
+		z-index: 10;
 	}
+	&__list {	
+		position: relative;
+	}
+	&__description {
+		padding-top: 32px;
+		display: block;
+		font-weight: 500;
+		font-size: 22px;
+	}
+}
 
-	&__item {
-		
-	}
-	&__list {
-
-		span {
-			display: block;
-			font-weight: 500;
-			font-size: 22px;
-			max-width: 75%;
-		}
-	}
+.element1:before {
+	content: "";
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 116px;
+	height: 80px;
+	background: url(../img/01.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 1;
+}
+.element2:before {
+	content: "";
+	position: absolute;
+	top: 100px;
+	left: 37%;
+	width: 166px;
+	height: 80px;
+	background: url(../img/02.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 1;
+}
+.element3:before {
+	content: "";
+	position: absolute;
+	top: 100px;
+	right: 0;
+	width: 116px;
+	height: 80px;
+	background: url(../img/03.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 1;
 }
 
 @import "media"; // Always at the end
