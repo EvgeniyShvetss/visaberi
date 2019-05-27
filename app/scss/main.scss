@@ -362,4 +362,76 @@ h3 {
 	z-index: 1;
 }
 
+.document {
+	padding-top: 189px;
+	&__title {
+		text-align: center;
+	}
+	&__text {
+		padding-top: 40px;
+		text-align: center;
+		font-weight: 600;
+		font-size: 22px;
+		color: $accent;
+	}
+	&__items {
+		padding-top: 112px;
+		padding-left: 10%;
+		padding-right: 10%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		text-align: center;
+		&-text{
+			padding-top: 43px;
+			font-weight: 500;
+			font-size: 24px;
+		}
+	}
+}
+
+.receive {
+	margin-top: 261px;
+	background: url(../img/adult-blur-businessman-2072899.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	.column {
+		display: flex;
+		&__left {
+			padding-top: 316px;
+			padding-bottom: 318px;
+			width: 50%;
+			color: $color-btn;
+		}
+		&__right {
+			width: 50%;
+			background: $accent;
+		}
+	}
+	&__title {
+
+	}
+	&__text {
+		padding-top: 28px;
+		font-weight: 500;
+		font-size: 18px;
+		max-width: 480px;
+	}
+}	
+
+.biometrics {
+	padding-top: 132px;
+
+	.column {
+		display: flex;
+		&__left {
+			width: 50%;
+		}
+		&__right {
+			width: 50%;
+		}
+	}
+}
+
 @import "media"; // Always at the end
