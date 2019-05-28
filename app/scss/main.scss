@@ -15,8 +15,8 @@ body {
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
-	// font-family: $default-font;
+	line-height: 1.5;
+	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
 	input, textarea, button {
@@ -44,7 +44,7 @@ b, strong {
 a:hover {
 	text-decoration: none;
 }
-
+ 
 li {
 	list-style: none;
 }
@@ -61,12 +61,23 @@ h3 {
 	color: $color-btn;
 	background: $color;
 	border-radius: 2.46108px;
+	font-weight: 900;
 }
 
 
 .top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 3;
+	box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+	a {
+		color: #fff;
+	}
 	&__info {
-		padding: 17px 0;
+		padding: 15px 0;
 		color: $color-btn;
 		background: $accent;
 	}
@@ -102,11 +113,9 @@ h3 {
 }
 
 .header {
-	background: url(../img/Background_photo.png);
-	background-repeat: no-repeat;
-	background-position: center center;
+	background: url(../img/Background_photo.png) no-repeat center center / cover;
 	&__content {
-		padding-top: 373px;
+		padding-top: 520px;
 		padding-bottom: 290px;
 		margin: 0 auto;
 		max-width: 80%;
@@ -120,6 +129,7 @@ h3 {
 	&__text {
 		color: $color-btn;
 		font-size: 28px;
+		padding-bottom: 37px;
 	}
 	&__donate {
 		background: $color-btn;
@@ -128,17 +138,17 @@ h3 {
 		&-input {
 			border:none;
 			border-left: 1px solid #DFE4E8;
-			padding: 21px 0 21px 36px;
+			padding: 28px 0 28px 36px;
 			width: 27%;
 		}
 		&-btn {
-			padding: 14px 40px;
+			padding: 18px 35px;
 		}
 	}
 }
 
 .country {
-	padding-bottom: 50px;
+	padding: 55px 0 50px;
 	&__title {
 		text-align: center;
 	}
@@ -147,24 +157,39 @@ h3 {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		margin-right: -20px;
 	}
 	&__item {
 		margin-bottom: 69px;
 		box-shadow: 0px 2.17947px 20.52px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
+		width: 325px;
+		margin-right: 20px;
 		.column {
 			display: flex;
 			&__left {
-				width: 50%;
+				padding-left: 15px;
 			}
 			&__right {
-				width: 50%;
+				padding-left: 20px;
+				padding-top: 22px;
+				padding-bottom: 20px;
+				padding-right: 20px;	
+				a {
+					font-size: 12px;
+					color: #676767;
+					display: inline-block;
+					position: relative;
+					top: -5px;
+					margin-bottom: 5px;
+				}
 			}
 		}
 	}
 	&__name {
 		font-size: 24px;
 		font-weight: 600;
+		line-height: 1;
 	}
 	&__btn {
 		cursor: pointer;
@@ -174,6 +199,10 @@ h3 {
 		background: $color-btn;
 		border-radius: 4px;
 		border: 2px solid $accent;
+		display: block;
+		width: 148px;
+		height: 34px;
+		text-align: center;
 		&:hover {
 			color: $color-btn;
 			background: $accent;
@@ -181,8 +210,7 @@ h3 {
 	}
 	&__flag {
 		position: relative;
-		top: -10px;
-		left: 10px;
+		top: -5px;
 	}
 
 
@@ -194,11 +222,14 @@ h3 {
 			color: #A6B3BC;
 			border: none;
 			background: transparent;
+			font-weight: 18;
+			font-weight: 800;
 			&:after {
 				content: "";
 				position: absolute;
-				top: 50px;
-				left: 50px;
+				top: 40px;
+				left: 50%;
+				transform: translateX(-50%);
 				width: 32px;
 				height: 18px;
 				background: url(../img/down.png);
@@ -232,13 +263,14 @@ h3 {
 		position: relative;
 		padding: 50px 26px 42px 28px;
 		max-width: 390px;
-		height: 1036px;
 		margin: 0 5px; 
 		background: #FFFFFF;
 		box-shadow: 0px 1.9166px 18.0451px rgba(0, 0, 0, 0.1);
 		border-radius: 9.58301px;
+		display: flex;
+		flex-direction: column;
 		&:last-child {
-			height: 474px;
+			align-self: flex-start;
 		}
 	}
 	&-list {
@@ -249,13 +281,14 @@ h3 {
 		line-height: 2;
 	}
 	&__btn {
-		margin-top: 35px;
-		padding: 15px 40px;
+		margin-top: 33px;
+		padding: 14px 50px;
 		font-size: 16px;
 		color: $accent;
 		border: 2px solid $accent;
 		border-radius: 4px;
 		background: $color-btn;
+		font-weight: 800;
 		&:hover {
 			background: $accent;
 			color: $color-btn;
@@ -286,16 +319,25 @@ h3 {
 	padding-top: 38px;
 }
 .item-price {
-	position: absolute;
-	bottom: 50px;
-	left: 23%;
+	margin-top: auto;
 	text-align: center;
 	font-weight: 800;
 	font-size: 28px;
 	color: $color;
+	padding-top: 68px;
 }
 
 .what-need {
+	.what-need-num {
+		z-index: 1;
+		position: absolute;
+		top: -12px;
+		left: 0px;
+		font-size: 80px;
+		font-weight: 800;
+		color: #ECF1F4;
+		line-height: 0.8;
+	}
 	&__title {
 		text-align: center;
 		color: $color;
@@ -306,7 +348,12 @@ h3 {
 		justify-content: space-between;
 	}
 	&__item {
-		max-width: 24%;
+		max-width: 30%;
+		position: relative;
+		 > div {
+			 position: relative;
+			 z-index: 1;
+		 }
 	}
 	&__text {
 		font-weight: 600;
@@ -322,6 +369,10 @@ h3 {
 		display: block;
 		font-weight: 500;
 		font-size: 22px;
+		img {
+			display: inline-block;
+			margin-right: 12px;
+		}
 	}
 }
 
@@ -422,15 +473,92 @@ h3 {
 
 .biometrics {
 	padding-top: 132px;
+	&-btn {
+		margin-top: 55px;
+		background-color: $accent;
+		padding: 24px 58px;
+		font-size: 16px;
+		font-weight: 800;
+	}
+	&__title {
+		color: $color;
+		padding-bottom: 60px;
+	}
+
+	&__text {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.4;
+		p {
+
+		}
+	}
 
 	.column {
 		display: flex;
 		&__left {
 			width: 50%;
+			padding-right: 200px;
 		}
 		&__right {
 			width: 50%;
+			img {
+				max-width: 100%;
+			}
 		}
+	}
+}
+
+.ready {
+	background: url(../img/people.png) no-repeat center top / cover;
+	padding: 140px 0 135px;
+	color: #fff;
+	text-align: center;
+	&-text {
+		padding-top: 18px;
+		font-size: 18px;
+		font-weight: 500;
+		padding-bottom: 45px;
+	}
+
+	&__donate {
+		display: flex;
+		justify-content: center;
+		.header__donate {
+			padding-right: 11px;
+		}
+		.header__form-input {
+			width: 550px;
+			border-left: none;
+		}
+	}
+}
+
+.map-section {
+	&__col {
+		width: 50%;
+		&.col-left {
+			min-height: 500px;
+			position: relative;
+		}
+	}
+}
+
+#map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.gm-style {
+		> div {
+			&:first-child {
+				> div:first-child {
+					filter: grayscale(100%);
+				}
+			}
+		}
+		
 	}
 }
 
