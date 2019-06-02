@@ -3,26 +3,36 @@
 
 /*==========  Desktop First  ==========*/
 
+@media screen and (min-width: 1920px) {
+    .container {
+        max-width: 1744px;
+    }
+}
+
 @media screen and (min-width: 1780px) {
     .container {
         max-width: 1720px;
     }
 }
 
-@media screen and (min-width: 1480px) {
-    .container {
-        max-width: 1420px;
-    }
-}
+// @media screen and (min-width: 1480px) {
+//     .container {
+//         max-width: 1420px;
+//     }
+// }
 
 @media screen and (max-width: 1780px) {
     .header__content {
-        max-width: 90%;
+        max-width: 80%;
     }
 
     .map-section__col.col-right {
         padding-left: 100px;
     }
+    .header__form-input {
+        width: 24%;
+    }
+    
 }
 
 @media screen and (max-width: 1480px) {
@@ -201,21 +211,268 @@
             max-width: 100px;
         }
     }
+    .document__items {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .biometrics__title {
+        
+    }
+     .footer__col {
+        display: block;
+    }
+    .footer__col-right {
+        width: 100%;
+        padding-top: 20px;
+    }
 }
 
 // ≥992px
 @include media-breakpoint-down(md) {
-
+   
+    .header__form-input {
+        display: block;
+        border: 1px solid #DFE4E8;
+        width: 100%;
+        margin-top: 10px;
+        padding: 15px 0 15px 36px;
+        
+    }
+    .header__donate {
+        background: transparent;
+        text-align: center;
+    }
+    .header__form-btn {
+        margin-top: 20px;
+        padding: 15px 30px;
+    }
+    .header__title {
+        font-size: 30px;
+    }
+    .header__text {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    .country__name {
+        font-size: 18px;
+    }
+    .country__btn {
+        width: 125px;
+        height: 30px;
+    }
+    .item-title {
+        font-size: 23px;
+    }
+    .innings__item {
+        padding: 26px 25px 19px 28px;
+        max-width: 305px;
+    }
+    .item-list {
+        padding-top: 15px;
+    }
+    .innings__btn {
+        padding: 5px 21px;
+        margin-top: 10px;
+    }
+   
+    .map-section__col.col-right {
+        padding-left: 40px;
+    }
+    .map-section__contact {
+        font-size: 20px;
+    }
+    .map-section__text {
+        font-size: 16px;
+    }
+    .biometrics .column {
+        display: block;
+    }
+    .biometrics .column__left {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+    .biometrics-btn {
+        padding: 15px 20px;
+    }
+    .biometrics .column__right {
+        display: none;
+    }
+    .document__item-img img {
+        width: 100px;
+    } 
+    .receive .column {
+        display: block;
+    }   
+    .receive .column__left {
+        width: 100%;
+    }
+    .receive .column__right {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .responsive__menu {
+        display: block;
+    }
+    .menu__links {
+        display: none;
+    }
+    .reseive__bg {
+        padding-left: 0;
+    }
+    .receive__title {
+        text-align: center;
+    }
+    .receive__text {
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 // ≥768px
 @include media-breakpoint-down(sm) {
-
+ 
+   
+    .dispatch-form {
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 0; 
+    }
+    .receive__consent {
+        display: block;
+        text-align: center;
+    }
+    .biometrics__title {
+        padding-bottom: 30px;
+    }
+    .biometrics-btn {
+        margin-top: 30px;
+        padding: 10px 15px;
+    }
+    .ready {
+        margin-top: 80px;
+    }
+    .ready__donate .header__form-input {
+        width: 470px;
+    }
+    .dispatch-form:last-child {
+        padding-bottom: 130px;
+    }
+  
+    .country__flag img {
+        width: 95px;
+    }
+    .country__item .column__right {
+        padding-left: 5px;
+    }
+    .country__item .column__left {
+        padding-left: 5px;
+    }
+    .country__item {
+        width: 240px;
+        margin-bottom: 30px;
+    }
+    .what-need__content {
+        display: block;
+    }
+    .what-need__item {
+        max-width: 100%;
+    }
+    .what-need__description {
+        padding-top: 20px;
+    }
+    .what-need__item>div {
+        padding-top: 25px;
+    }
+    .document__items {
+        padding-top: 50px;
+    }
+    .innings__content {
+        padding-bottom: 50px;
+    }
+    .document__item-img img {
+        width: 60px;
+    }
+    .document__item-text {
+        font-size: 16px;
+    }
+    .innings__item {
+        max-width: 100%;
+        width: 100%;
+    }
+    .innings-list {
+        max-width: 100%;
+    }
+    .map-section {
+        flex-direction: column-reverse
+    }
+    .map-section__col {
+        width: 100%;
+    }
+    .map-section__col.col-right {
+        margin: 0 auto;
+        text-align: center;
+        padding-left: 0;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+    .footer, .map-section {
+        margin-top: 6%;
+    }
+    .footer__col-left {
+        width: 100%;
+    }
+    .footer__col-right {
+        display: block;
+    }
+    .footer-copyright__container {
+        display: block;
+    }
+    .footer-copyright__link span {
+        padding-left: 0;
+    }
+   
 }
 
 // ≥576px
 @include media-breakpoint-down(xs) {
-
+    .ready__donate .header__form-input {
+        width: 300px;
+    }
+    .country__item {
+        width: 100%;
+    }
+    .country__flag img {
+        width: 100%;
+    }
+    .country__item .column__left {
+        padding-left: 20px;
+    }
+    .country__item .column__right {
+        padding-left: 25px;
+    }
+    .document__items {
+        display: block;
+    }
+    .document__item-img {
+        padding-top: 20px;
+    }
+    .document__item-text {
+        padding-top: 15px;
+    }
+    .document__item-img img {
+        width: 100px;
+    }
+    .receive__consent-btn {
+        display: block;
+        margin: 0 auto;
+    }
+    .country__btn {
+        width: 145px;
+    }
 }
 
 
